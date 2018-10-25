@@ -1,4 +1,12 @@
 # LA-MODA
+
+![Travis (.org)](https://img.shields.io/travis/:user/:repo.svg) 
+
+![Coveralls github](https://img.shields.io/coveralls/github/jekyll/jekyll.svg)
+
+![Code Climate](https://img.shields.io/codeclimate/coverage/jekyll/jekyll.svg)
+
+
 LA MODA is a web application that helps the store owner manage sales and product inventory records. This application is meant for use in a single store.
 
 #Required Features
