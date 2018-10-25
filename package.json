@@ -1,0 +1,45 @@
+{
+  "name": "la-moda",
+  "version": "1.0.0",
+  "description": "LA MODA is a web application that helps the store owner manage sales and product inventory records. This application is meant for use in a single store.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha  --require babel-register server/test --exit",
+    "build": "rimraf es5_server/ && babel ./server --out-dir es5_server/ --ignore ./node_modules,./.babelrc,./npm-debug.log --copy-files",
+    "start": "node es5_server/app.js",
+    "start:dev": "nodemon --require babel-register server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itunucole/LA-MODA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itunucole/LA-MODA/issues"
+  },
+  "homepage": "https://github.com/itunucole/LA-MODA#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "rimraf": "^2.6.2",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
