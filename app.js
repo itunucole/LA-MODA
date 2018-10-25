@@ -32,11 +32,11 @@ app.use('/api/v1', productsRoute);
 
 
 //get the port from the process env 
-const PORT = 8080
+const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`server is listening for requests at port ${PORT}`);
-})
+});
 
-module.exports = app //for testing 
+module.exports = app; //for testing 
 
 
