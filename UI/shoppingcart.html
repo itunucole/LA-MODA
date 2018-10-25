@@ -1,0 +1,119 @@
+<html>
+ <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+  <meta name="description" content="Store Manager is a web application that helps store owners manage sales and product inventory records.">
+  <meta name="keyword" cotent="store manager, store owners, product inventory records">
+   <meta name="author" content="Itunu cole">
+	<title>lÀ MODA | welcome</title>
+<link rel="stylesheet" href="css\shoppingcart.css">
+<script src="js/shoppingcart.js"></script> 
+<div class="header">
+    <div class="logo">
+        <i class="fa fa-tachometer"></i>
+        <span>  LA MODA</span>
+    </div>
+    <a href="#" class="nav-trigger"><span></span></a>
+</div>
+<div class="side-nav">
+    <div class="logo">
+        <i class="fa fa-tachometer"></i>
+        <span>LA MODA</span>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="dashboard.html">
+                    <span><i class="fa fa-user"></i></span>
+                    <span>profile</span>
+                </a>
+            </li>
+            <li>   
+                <a href="purchaseditem.html">
+                    <span><i class="fa fa-envelope"></i></span>
+                    <span>purchase item</span>
+                </a>
+            </li>
+            <li>
+                <a href="sales.html">
+                    <span><i class="fa fa-bar-chart"></i></span>
+                    <span>view sales</span>
+                </a>
+            </li>
+            <li class="current">
+                <a href="shoppingcart.html">
+                    <span><i class="fa fa-credit-card-alt"></i></span>
+                    <span>shopping cart</span>
+                </a>
+            </li>
+                   <li>
+                    <a href=users.html>
+                        <span><i class="fa fa-credit-card-alt"></i></span>
+                        <span>manage users</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="main-content">
+        <div class="container">
+    
+                <!-- SHOPPING CART -->
+                <main class="shopping">
+                    <!-- NEW ITEM -->
+                    <div class="new-item">
+                        <h1 class="new-item__text">New Item</h1>
+        
+                        <form action="#" id="new" class="new-item__form">
+                            <div class="new-item__form-group">
+                                <label for="name" class="new-item__label">Item Name</label>
+                                <input type="text" class="new-item__name" id="name" required>
+                            </div>
+        
+                            <div class="new-item__price-qty">
+                            <div class="new-item__form-group">
+                                <label for="price" class="new-item__label">Price</label>
+                                <input type="number" min="1" class="new-item__price" id="price" required>
+                            </div>
+        
+                            <div class="new-item__form-group">
+                                <label for="qty" class="new-item__label">Qty</label>
+                                <input type="number" min="1" class="new-item__qty" id="qty" required>
+                            </div>
+                        </div>
+        
+                            <div class="new-item__form-group-btn">
+                                <button type="submit" class="btn-add-new">Add TO CART</button>
+                            </div>
+                        </form>
+                    </div>
+        
+                    <!-- CART-->
+                    <div class="cart">
+        
+                        <!-- Summary -->
+                        <section class="cart-summary">
+                            <h1 class="cart-summary__text">
+                                <span class="cart-summary__total-items-count">0</span> items in cart
+                            </h1>
+                            <h1 class="cart-summary__total-cost">0</h1>
+                        </section>
+        
+                        <!-- List -->
+                        <section class="cart-items"></section>
+        
+        
+                        <!-- Checkout -->
+                        <section class="checkout">
+                            <a href="#name" class="btn-continue">Add New</a>
+                            <button type="button" class="btn-clear-cart">Clear Cart</button>
+                        </section>
+        
+                    </div>
+                </main>
+            </div>
+        </div>
+        </body>
+        </html>
+</div>
+    
