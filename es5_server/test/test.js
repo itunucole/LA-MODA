@@ -1,14 +1,14 @@
 'use strict';
 
-import _app from '../app';
+var _app = require('../app');
 
 var _app2 = _interopRequireDefault(_app);
 
-import _chai from 'chai';
+var _chai = require('chai');
 
 var _chai2 = _interopRequireDefault(_chai);
 
-import _chaiHttp from 'chai-http';
+var _chaiHttp = require('chai-http');
 
 var _chaiHttp2 = _interopRequireDefault(_chaiHttp);
 
@@ -58,13 +58,6 @@ describe('Fetch A single Product', function () {
             res.should.have.status(200);
             res.body.should.be.a('object');
             console.log(res.body);
-            // res.body.should.have.property('id').eql(productId);;
-            // res.body.should.have.property('item');
-            // res.body.should.have.property('name');
-            // res.body.should.have.property('price');
-            // res.body.should.have.property('item');
-            // res.body.should.have.property('name');
-            // res.body.should.have.property('price'); 
             done();
         });
     });
@@ -73,9 +66,9 @@ describe('Fetch A single Product', function () {
 describe('Update A single Product', function () {
     it('It should update a single product', function (done) {
         _chai2.default.request(_app2.default).put('/api/v1/products/1').send({
-            name: 'Bingo',
-            price: 50,
-            item: 2
+            name: 'Ring',
+            price: 60,
+            item: 1
         }).end(function (err, res) {
             res.should.have.status(200);
             res.body.should.be.a('object');
@@ -93,13 +86,6 @@ describe('Delete A single Product', function () {
         _chai2.default.request(_app2.default).delete('/api/v1/products/1').end(function (err, res) {
             res.should.have.status(200);
             res.body.should.be.a('object');
-            // res.body.should.have.property('id').eql(productId);;
-            // res.body.should.have.property('item');
-            // res.body.should.have.property('name');
-            // res.body.should.have.property('price');
-            // res.body.should.have.property('item');
-            // res.body.should.have.property('name');
-            // res.body.should.have.property('price'); 
             done();
         });
     });
@@ -117,9 +103,9 @@ describe('Add New Sales Record', function () {
     });
     it('It should create a new sales record with all the properties', function (done) {
         _chai2.default.request(_app2.default).post('/api/v1/sales').send({
-            name: 'phone',
-            price: 20,
-            item: 2
+            name: 'Bag',
+            price: 200,
+            item: 1
         }).end(function (err, res) {
             res.body.sale.should.have.property('name');
             res.body.sale.should.have.property('price');

@@ -1,42 +1,49 @@
-import express from 'express';
+'use strict';
 
-const app = express();
+var _express = require('express');
 
-import bodyParser from 'body-parser';
+var _express2 = _interopRequireDefault(_express);
 
-const router = express.Router();
+var _bodyParser = require('body-parser');
 
-import productsRoute from './routes/products';
+var _bodyParser2 = _interopRequireDefault(_bodyParser);
 
-import salesRoute from './routes/sales';
+var _products = require('./routes/products');
 
+var _products2 = _interopRequireDefault(_products);
+
+var _sales = require('./routes/sales');
+
+var _sales2 = _interopRequireDefault(_sales);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var app = (0, _express2.default)();
+
+var router = _express2.default.Router();
 
 //to avoid cors issue 
-app.use((req, res, next)=> {
+app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
-  });
-
-
-
-//use the body parser middleware
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
-
-//define routes 
-app.get("/", (req, res) => res.json({message: "You are welcome to LA MODA"}));
-
-app.use('/api/v1', productsRoute); 
-
-
-
-//get the port from the process env 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`server is listening for requests at port ${PORT}`);
 });
 
-module.exports = app; //for testing 
+//use the body parser middleware
+app.use(_bodyParser2.default.urlencoded({ extended: true }));
+app.use(_bodyParser2.default.json());
 
+//define routes 
+app.get("/", function (req, res) {
+    return res.json({ message: "You are welcome to LA MODA" });
+});
 
+app.use('/api/v1', _products2.default);
+
+//get the port from the process env 
+var PORT = 3000;
+app.listen(PORT, function () {
+    console.log('server is listening for requests at port ' + PORT);
+});
+
+module.exports = app; //for testing
