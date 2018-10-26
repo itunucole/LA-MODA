@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha  --require babel-register server/test --exit",
-    "build": "rimraf es5_server/ && babel ./server --out-dir es5_server/ --ignore ./node_modules,./.babelrc,./npm-debug.log --copy-files",
+    "build": "rimraf es5_server/ && babel server --out-dir es5_server/ --ignore ./node_modules,./.babelrc,./npm-debug.log --copy-files",
     "start": "node es5_server/app.js",
     "start:dev": "nodemon --require babel-register server/app.js"
   },
@@ -33,6 +33,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
     "nyc": "^13.1.0",
     "rimraf": "^2.6.2",
     "should": "^13.2.3"
