@@ -32,7 +32,7 @@ app.use('/api/v1', productsRoute);
 
 
 //get the port from the process env 
-const PORT = 3000;
+const PORT = process.env.PORT|| 3000;
 app.listen(PORT, () => {
     console.log(`server is listening for requests at port ${PORT}`);
 });
