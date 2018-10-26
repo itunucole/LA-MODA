@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha  --require babel-register server/test --exit",
-    "build": "rimraf es5_server/ && babel server --out-dir es5_server/ --ignore ./node_modules,./.babelrc,./npm-debug.log --copy-files",
-    "start": "node es5_server/app.js",
+    "build": "rimraf server/ && babel server --out-dir server/ --ignore ./node_modules,./.babelrc,./npm-debug.log --copy-files",
+    "start": "node server/app.js",
     "start:dev": "nodemon --require babel-register server/app.js"
   },
   "repository": {
